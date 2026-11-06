@@ -232,6 +232,208 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
 #cho-phien .cp-gallery-shell{position:relative}
 #cho-phien .cp-gallery-shell>.cp-gallery-count{z-index:1;border:1px solid #ffffff55;min-height:36px}
 
+/* Search and responsive layout */
+#cho-phien .cp-search{grid-template-columns:minmax(0,1.6fr) minmax(170px,.8fr) auto;gap:0;padding:8px;border-radius:18px}
+#cho-phien .cp-search .cp-field{padding:8px 20px;gap:3px}
+#cho-phien .cp-search .cp-field:nth-child(2){border-right:0}
+#cho-phien .cp-search .cp-field input{font-size:15px;min-height:26px}
+#cho-phien .cp-search .cp-primary{min-height:58px;padding:16px 24px;font-size:14px}
+#cho-phien .cp-search-mobile{display:none}
+#cho-phien .cp-quick{padding:14px 0 18px}
+#cho-phien .cp-categories{padding:18px 0;margin-bottom:8px}
+#cho-phien .cp-category-layout{display:flex;align-items:center;gap:12px;border-top:1px solid var(--cp-line)}
+#cho-phien .cp-category-layout .cp-categories{flex:1;min-width:0;border:0;margin:0}
+#cho-phien .cp-category-layout .cp-filter-button{flex-shrink:0;margin-left:0}
+#cho-phien .cp-category{min-height:42px;font-size:12px;padding:10px 14px}
+#cho-phien .cp-category[aria-pressed=true]{background:var(--cp-soft);border-color:var(--cp-ink)}
+#cho-phien .cp-item h3{line-height:1.5}
+#cho-phien .cp-photo-button img{display:block;width:100%;height:100%;object-fit:cover}
+#cho-phien .cp-booking-inputs{grid-template-columns:1fr}
+#cho-phien .cp-mobile-book{display:none}
+#cho-phien .cp-filters{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+#cho-phien .cp-filters select{max-width:100%;min-width:0;width:100%}
+#cho-phien .cp-results-meta{line-height:1.6}
+@media(max-width:1000px){
+ #cho-phien .cp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #cho-phien .cp-search .cp-field{padding-inline:14px}
+ #cho-phien .cp-search .cp-primary{padding-inline:18px}
+}
+@media(max-width:760px){
+ #cho-phien .cp-wrap{padding-inline:24px}
+ #cho-phien .cp-search{grid-template-columns:minmax(0,1fr) auto;border-radius:16px;padding:8px;margin-top:22px}
+ #cho-phien .cp-search .cp-field:first-child{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--cp-line);padding:9px 10px 12px;margin-bottom:6px}
+ #cho-phien .cp-search .cp-field:nth-child(2){padding:8px 10px;min-width:0;grid-column:1;grid-row:2}
+ #cho-phien .cp-search .cp-field span{font-size:12px;margin-bottom:2px}
+ #cho-phien .cp-search .cp-field input{font-size:16px;min-width:0;min-inline-size:0;max-width:100%;color:var(--cp-ink)}
+ #cho-phien .cp-search .cp-primary{min-height:50px;min-width:120px;font-size:14px;padding:13px 16px;grid-column:2;grid-row:2}
+ #cho-phien .cp-search-desktop{display:none}
+ #cho-phien .cp-search-mobile{display:inline}
+ #cho-phien .cp-categories{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:8px;margin-inline:-24px;padding-inline:24px;padding-block:15px;overscroll-behavior-x:contain}
+ #cho-phien .cp-categories::-webkit-scrollbar{display:none}
+ #cho-phien .cp-category,#cho-phien .cp-filter-button{flex-shrink:0;white-space:nowrap;min-height:44px;font-size:12px;margin:0}
+ #cho-phien .cp-category-layout{gap:10px;border-bottom:1px solid var(--cp-line)}
+ #cho-phien .cp-category-layout .cp-categories{margin:0;padding:14px 0}
+ #cho-phien #cp-filter-toggle{background:var(--cp-bg);border:1px solid var(--cp-line);border-radius:9px;padding:10px 13px}
+ #cho-phien .cp-filters{grid-template-columns:repeat(2,minmax(0,1fr));padding:18px;gap:16px;border-radius:12px}
+ #cho-phien .cp-filters label{font-size:12px;min-width:0}
+ #cho-phien .cp-filters select{font-size:16px;min-height:44px}
+ #cho-phien .cp-section-head{gap:12px;align-items:flex-start}
+ #cho-phien .cp-section-head h2{font-size:26px;line-height:1.25}
+ #cho-phien .cp-sort{max-width:100%;min-height:44px;font-size:12px}
+ #cho-phien .cp-quick{gap:7px;padding:12px 0 14px;flex-wrap:nowrap;overflow:auto;scrollbar-width:none;white-space:nowrap}
+ #cho-phien .cp-quick>*{flex-shrink:0}
+ #cho-phien .cp-quick button{min-height:36px;font-size:12px}
+ #cho-phien .cp-mobile-book{display:flex;position:fixed;inset:auto 0 0;align-items:center;gap:10px;padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));background:var(--cp-bg);border-top:1px solid var(--cp-line);box-shadow:0 -8px 30px #243d310a;z-index:8}
+ #cho-phien .cp-mobile-book>div{min-width:0;flex:1}
+ #cho-phien .cp-mobile-book small{display:block;font-size:11px;color:var(--cp-muted);margin-bottom:3px}
+ #cho-phien .cp-mobile-book strong{display:block;font-size:14px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+ #cho-phien .cp-mobile-book a{display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;border-radius:9px;text-decoration:none;font-size:14px;font-weight:600}
+ #cho-phien .cp-mobile-book-link{padding:12px 18px;background:var(--cp-button);color:#fff}
+ #cho-phien .cp-mobile-call{width:46px;background:var(--cp-paper);border:1px solid var(--cp-line);flex-shrink:0}
+ #cho-phien #cp-detail{padding-bottom:100px}
+ #cho-phien .cp-detail-tools{gap:10px;align-items:start}
+ #cho-phien .cp-back,#cho-phien .cp-save-detail{min-height:44px;font-size:12px}
+ #cho-phien .cp-detail-heading h1{font-size:30px;line-height:1.25;letter-spacing:-.6px}
+ #cho-phien .cp-detail-subline{gap:9px 12px;line-height:1.6;font-size:12px}
+ #cho-phien .cp-gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:6px;height:285px;border-radius:13px;scrollbar-width:none}
+ #cho-phien .cp-gallery-photo,#cho-phien .cp-gallery-photo:nth-child(n+4){display:block;flex:0 0 88%;scroll-snap-align:start}
+ #cho-phien .cp-gallery-1 .cp-gallery-photo{flex-basis:100%}
+ #cho-phien .cp-gallery-count{font-size:11px;min-height:38px}
+ #cho-phien .cp-rich-sidebar{grid-row:auto;padding-top:22px}
+ #cho-phien .cp-rich-section h2{font-size:25px}
+ #cho-phien .cp-rich-summary,#cho-phien .cp-highlights li,#cho-phien .cp-timeline p,#cho-phien .cp-practical-item p,#cho-phien .cp-practical-item ul,#cho-phien .cp-review-card p{font-size:14px;line-height:1.8}
+ #cho-phien .cp-lightbox{padding:60px 36px calc(35px + env(safe-area-inset-bottom,0px))}
+ #cho-phien .cp-lightbox figcaption{font-size:12px}
+ #cho-phien .cp-footer{gap:10px;line-height:1.6}
+}
+@media(max-width:600px){
+ #cho-phien .cp-wrap{padding-inline:18px}
+ #cho-phien .cp-header{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:12px;min-height:0;padding:17px 18px 12px}
+ #cho-phien .cp-logo{font-size:27px;letter-spacing:-1.4px}
+ #cho-phien .cp-logo svg{width:25px;height:25px}
+ #cho-phien .cp-nav{width:100%;margin:0;gap:6px;display:flex}
+ #cho-phien .cp-nav button{flex:1;min-height:42px;font-size:12px;border:0;padding:9px 7px;border-radius:24px}
+ #cho-phien .cp-nav button[aria-pressed=true]{background:var(--cp-soft);color:var(--cp-ink)}
+ #cho-phien .cp-data-banner{padding-top:14px;font-size:10px}
+ #cho-phien .cp-data-banner>span:last-child{display:none}
+ #cho-phien .cp-hero{grid-template-columns:1fr;gap:20px;padding-top:20px}
+ #cho-phien .cp-hero .cp-kicker{font-size:9px;letter-spacing:1.25px}
+ #cho-phien .cp-hero h1{font-size:clamp(35px,9.8vw,51px);line-height:1.12;letter-spacing:-1.8px;max-width:100%;margin:12px 0}
+ #cho-phien .cp-intro{font-size:14px;line-height:1.75;max-width:100%}
+ #cho-phien .cp-intro br{display:none}
+ #cho-phien .cp-hero-photo{height:215px;border-radius:16px 52px 16px 16px}
+ #cho-phien .cp-photo-label{left:18px;bottom:17px}
+ #cho-phien .cp-photo-label p{font-size:22px}
+ #cho-phien .cp-photo-label small{font-size:10px}
+ #cho-phien .cp-seal{right:16px;top:14px;width:64px;height:64px;font-size:11px}
+ #cho-phien .cp-categories{margin-inline:-18px;padding-inline:18px}
+ #cho-phien .cp-section-head{display:flex;flex-direction:column;gap:12px;margin-top:18px;margin-bottom:20px}
+ #cho-phien .cp-section-head h2{font-size:26px;letter-spacing:-.6px}
+ #cho-phien #cp-results-meta{font-size:12px;margin-top:7px}
+ #cho-phien .cp-sort{font-size:12px;align-self:flex-end;border:1px solid var(--cp-line);border-radius:8px;padding:9px 11px;max-width:100%}
+ #cho-phien .cp-grid{grid-template-columns:minmax(0,1fr);gap:29px}
+ #cho-phien .cp-card-media{aspect-ratio:1.5;border-radius:13px}
+ #cho-phien .cp-location{font-size:10px;line-height:1.5;margin-top:12px;letter-spacing:.65px;overflow-wrap:anywhere}
+ #cho-phien .cp-item h3{font-size:18px;line-height:1.45;margin-top:6px;letter-spacing:-.25px}
+ #cho-phien .cp-item-meta{font-size:13px;line-height:1.65;margin-top:5px}
+ #cho-phien .cp-price{font-size:13px;margin-top:8px}
+ #cho-phien .cp-price strong{font-size:17px}
+ #cho-phien .cp-favorite{width:44px;height:44px;top:10px;right:10px}
+ #cho-phien .cp-card-contact{font-size:13px;min-height:40px;padding-top:9px;align-items:center}
+ #cho-phien .cp-item{padding-bottom:16px;border-bottom:1px solid var(--cp-line)}
+ #cho-phien .cp-data-status{font-size:11px}
+ #cho-phien .cp-places{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+ #cho-phien .cp-place img{height:115px;border-radius:10px}
+ #cho-phien .cp-place strong{font-size:23px}
+ #cho-phien .cp-place span{font-size:12px}
+ #cho-phien .cp-bottom{padding:34px 0}
+ #cho-phien .cp-bottom h2{font-size:29px}
+ #cho-phien .cp-bottom p{font-size:13px;line-height:1.8}
+ #cho-phien .cp-booking-inputs input{font-size:16px}
+ #cho-phien .cp-detail-heading h1{font-size:28px}
+ #cho-phien .cp-package-option{padding:17px}
+ #cho-phien .cp-practical-item{padding:14px}
+ #cho-phien .cp-review-card{padding:17px}
+ #cho-phien .cp-mobile-book{padding-inline:16px}
+}
+@media(max-width:360px){
+ #cho-phien .cp-wrap{padding-inline:14px}
+ #cho-phien .cp-header{padding-inline:14px}
+ #cho-phien .cp-search .cp-primary{min-width:106px;padding-inline:12px}
+ #cho-phien .cp-search .cp-field{padding-inline:7px}
+ #cho-phien .cp-categories{margin-inline:-14px;padding-inline:14px}
+ #cho-phien .cp-mobile-book{gap:7px;padding-inline:12px}
+ #cho-phien .cp-mobile-book-link{padding-inline:13px}
+ #cho-phien .cp-gallery{height:240px}
+}
+
+/* Approved PC cards, mobile horizontal cards, and province suggestions. */
+#cho-phien .cp-search{position:relative;z-index:5}
+#cho-phien .cp-destination-field{position:relative;min-width:0}
+#cho-phien .cp-search .cp-field:first-child{border-right:1px solid var(--cp-line)}
+#cho-phien .cp-search .cp-field:nth-child(2){border-right:0}
+#cho-phien .cp-field-label{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;margin-bottom:4px}
+#cho-phien .cp-field-label svg{width:14px;height:14px}
+#cho-phien .cp-query-wrap{display:flex;align-items:center;gap:6px;min-width:0}
+#cho-phien .cp-query-wrap input{flex:1;min-width:0;min-inline-size:0}
+#cho-phien .cp-province-toggle{display:grid;place-items:center;flex-shrink:0;width:34px;height:34px;border-radius:8px;color:var(--cp-muted)}
+#cho-phien .cp-province-toggle svg{width:17px;height:17px;transition:transform .15s}
+#cho-phien .cp-province-toggle[aria-expanded=true] svg{transform:rotate(180deg)}
+#cho-phien .cp-province-picker{position:absolute;left:-1px;right:-1px;top:calc(100% + 13px);z-index:20;border:1px solid var(--cp-line);border-radius:12px;background:var(--cp-bg);box-shadow:0 14px 35px #15291c24;overflow:hidden}
+#cho-phien .cp-province-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 14px 10px;border-bottom:1px solid var(--cp-line);font-size:11px;color:var(--cp-muted)}
+#cho-phien .cp-province-heading strong{color:var(--cp-ink);font-weight:600}
+#cho-phien .cp-province-list{list-style:none;padding:5px;margin:0;max-height:280px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+#cho-phien .cp-province-list li{margin:0;padding:0}
+#cho-phien .cp-province-option{display:flex;align-items:center;gap:10px;width:100%;min-height:46px;padding:10px;border-radius:8px;text-align:left;font-size:13px}
+#cho-phien .cp-province-option svg{width:17px;height:17px;flex-shrink:0;color:var(--cp-muted)}
+#cho-phien .cp-province-option span{flex:1}
+#cho-phien .cp-province-option small{display:block;color:var(--cp-muted);font-size:10px;margin-top:2px}
+#cho-phien .cp-province-option:hover,#cho-phien .cp-province-option.cp-province-active,#cho-phien .cp-province-option[aria-selected=true]{background:var(--cp-soft)}
+#cho-phien .cp-province-empty{padding:18px 12px!important;color:var(--cp-muted);font-size:12px;line-height:1.7}
+#cho-phien .cp-province-hint{padding:9px 14px;border-top:1px solid var(--cp-line);font-size:10px;color:var(--cp-muted)}
+#cho-phien .cp-item{display:flex;flex-direction:column;min-width:0}
+#cho-phien .cp-card-content{display:flex;flex-direction:column;align-items:stretch;min-width:0;flex:1}
+#cho-phien .cp-location{display:flex;align-items:center;gap:4px}
+#cho-phien .cp-location svg{width:11px;height:11px;flex-shrink:0}
+#cho-phien .cp-card-duration{display:flex;gap:5px;align-items:center;color:var(--cp-muted);font-size:11px;line-height:1.5;margin-top:7px}
+#cho-phien .cp-card-duration svg{width:12px;height:12px;flex-shrink:0}
+#cho-phien .cp-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:5px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
+#cho-phien .cp-card-bottom .cp-price{font-size:11px;margin:0;white-space:nowrap}
+#cho-phien .cp-card-bottom .cp-price strong{font-size:16px}
+#cho-phien .cp-card-contact{display:flex;gap:3px;align-items:center;min-height:27px;font-size:11px;text-decoration:none;padding:0;white-space:nowrap}
+#cho-phien .cp-card-contact svg{width:13px;height:13px}
+#cho-phien .cp-main-book{color:#fff}
+@media(max-width:760px){
+ #cho-phien .cp-search .cp-field:first-child{border-right:0}
+ #cho-phien .cp-search .cp-field:nth-child(2){padding:8px 10px;min-width:0;grid-column:1;grid-row:2}
+ #cho-phien .cp-province-picker{top:calc(100% + 5px);left:-3px;right:-3px}
+ #cho-phien .cp-field-label{font-size:12px}
+ #cho-phien .cp-grid{grid-template-columns:minmax(0,1fr);gap:0}
+ #cho-phien .cp-item{display:grid;grid-template-columns:116px minmax(0,1fr);gap:13px;padding:17px 0;border-bottom:1px solid var(--cp-line)}
+ #cho-phien .cp-card-media{height:146px;aspect-ratio:unset;align-self:start;border-radius:11px;min-width:0}
+ #cho-phien .cp-card-content{align-self:stretch;min-width:0}
+ #cho-phien .cp-location{display:flex;align-items:center;gap:4px;font-size:10px;line-height:1.4;letter-spacing:.8px;margin:0 0 5px;color:var(--cp-muted);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+ #cho-phien .cp-location svg{width:11px;height:11px;flex-shrink:0}
+ #cho-phien .cp-title-button{display:block;width:100%;min-width:0;padding:0;text-align:left}
+ #cho-phien .cp-item h3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font:600 15px/1.4 Arial,sans-serif;letter-spacing:0;margin:0}
+ #cho-phien .cp-item-meta{font-size:11px;line-height:1.5;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;margin-top:5px}
+ #cho-phien .cp-card-duration{font-size:11px;margin-top:7px}
+ #cho-phien .cp-card-bottom{padding-top:8px}
+ #cho-phien .cp-card-bottom .cp-price strong{font-size:15px}
+ #cho-phien .cp-card-contact{font-size:11px;min-height:27px;padding:0}
+ #cho-phien .cp-favorite{width:34px;height:34px;top:5px;right:5px;display:grid;place-items:center}
+ #cho-phien .cp-favorite svg{width:18px;height:18px}
+ #cho-phien .cp-real-rating{font-size:11px;flex-wrap:wrap}
+ #cho-phien .cp-real-rating small{font-size:10px}
+ #cho-phien .cp-data-status{font-size:10px;align-self:start}
+}
+@media(max-width:360px){
+ #cho-phien .cp-item{grid-template-columns:100px minmax(0,1fr);gap:11px}
+ #cho-phien .cp-item h3{font-size:14px}
+ #cho-phien .cp-search .cp-field:nth-child(2){padding-inline:7px}
+}
+@media(pointer:coarse){#cho-phien .cp-favorite{width:40px;height:40px}#cho-phien .cp-card-contact{min-height:36px}}
+
   </style>
   <header class="cp-header cp-wrap">
     <button class="cp-logo cursor-interaction" id="cp-home" aria-label="Chợ phiên – trang khám phá"><i data-lucide="flower-2" aria-hidden="true"></i>chợ phiên</button>
@@ -241,21 +443,23 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
     <section id="cp-story" class="cp-story" hidden><h2>Mỗi miền đất, một lời mời.</h2><p>Chợ phiên kết nối người muốn khám phá văn hoá Việt với những người đang gìn giữ nó mỗi ngày: nghệ nhân, người làm bếp, người kể chuyện và cộng đồng địa phương.</p><p>Đi chậm một chút. Tự tay làm một điều mới. Mang về một câu chuyện.</p></section>
     <div id="cp-discover"><div class="cp-data-banner"><span><b id="cp-data-count"></b> trải nghiệm · 45 điểm đến · Ba miền Việt Nam</span><span>Đi để chạm vào văn hoá</span></div>
       <section class="cp-hero" aria-label="Khám phá văn hoá Việt">
-        <div><div class="cp-kicker">Gặp gỡ Việt Nam, theo cách khác</div><h1>Đi muôn nơi.<br>Chạm vào <em>hồn Việt.</em></h1><p class="cp-intro">Từ một bàn xoay gốm đến căn bếp quê nhà.<br>Khám phá văn hoá qua những trải nghiệm<br class="cp-desktop-break"> cùng người bản địa.</p></div>
+        <div><div class="cp-kicker">Gặp gỡ Việt Nam, theo cách khác</div><h1>Đi muôn nơi.<br>Chạm vào <em>hồn Việt.</em></h1><p class="cp-intro">Từ một bàn xoay gốm đến căn bếp quê nhà. <br>Khám phá văn hoá qua những trải nghiệm<br class="cp-desktop-break"> cùng người bản địa.</p></div>
         <div class="cp-hero-photo"><img data-asset="hero-pottery" alt="Ghi dấu nghệ thuật – trải nghiệm vuốt gốm"><div class="cp-seal">Đi để<br><em>kết nối.</em></div><div class="cp-photo-label"><small>Bát Tràng · Hà Nội</small><p>Đôi tay làm nên câu chuyện.</p></div></div>
       </section>
       <form id="cp-search" class="cp-search">
-        <label class="cp-field"><span><i data-lucide="map-pin" aria-hidden="true"></i>Bạn muốn đi đâu?</span><input id="cp-destination" list="cp-destinations" placeholder="Điểm đến, workshop, tour đêm…" autocomplete="off"><datalist id="cp-destinations"><option value="Hà Nội"></option><option value="Huế"></option><option value="Hà Giang"></option><option value="Tà Xùa"></option><option value="Sa Pa"></option><option value="Ninh Bình"></option><option value="Cao Bằng"></option><option value="Pù Luông"></option><option value="Mộc Châu"></option><option value="Mù Cang Chải"></option><option value="Hạ Long"></option><option value="Điện Biên"></option><option value="Bắc Hà"></option><option value="Mai Châu"></option><option value="Ba Bể"></option><option value="Hội An"></option><option value="Đà Nẵng"></option><option value="Đà Lạt"></option><option value="Đắk Lắk"></option><option value="Phú Yên"></option><option value="Quy Nhơn"></option><option value="Nha Trang"></option><option value="Quảng Trị"></option><option value="Phong Nha"></option><option value="Mỹ Sơn"></option><option value="Ninh Thuận"></option><option value="Lý Sơn"></option><option value="Kon Tum"></option><option value="TP.HCM"></option><option value="Củ Chi"></option><option value="Tây Ninh"></option><option value="Cần Thơ"></option><option value="An Giang"></option><option value="Vĩnh Long"></option><option value="Sa Đéc"></option><option value="Bến Tre"></option><option value="Côn Đảo"></option><option value="Cát Tiên"></option><option value="Cần Giờ"></option><option value="Phú Quốc"></option><option value="Mũi Né"></option><option value="Cát Bà"></option><option value="Lạng Sơn"></option><option value="Cà Mau"></option><option value="Trà Vinh"></option></datalist></label>
+        <div class="cp-field cp-destination-field">
+  <label for="cp-destination" class="cp-field-label"><i data-lucide="map-pin" aria-hidden="true"></i>Bạn muốn đi đâu?</label>
+  <div class="cp-query-wrap"><input id="cp-destination" type="search" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="cp-province-list" placeholder="Chọn tỉnh, thành hoặc nhập từ khoá…" autocomplete="off"><button class="cp-province-toggle cursor-interaction" type="button" aria-label="Chọn tỉnh, thành" aria-controls="cp-province-list" aria-expanded="false"><i data-lucide="chevron-down" aria-hidden="true"></i></button></div>
+  <div class="cp-province-picker" hidden><div class="cp-province-heading"><strong>Chọn tỉnh, thành</strong><span id="cp-province-count"></span></div><ul class="cp-province-list" id="cp-province-list" role="listbox" aria-label="Tỉnh, thành Việt Nam"></ul><div class="cp-province-hint">Tìm bằng tên không dấu hoặc địa danh quen thuộc.</div></div>
+</div>
         <label class="cp-field"><span><i data-lucide="calendar-days" aria-hidden="true"></i>Ngày dự kiến</span><input id="cp-date" type="date" aria-label="Ngày tham gia, để trống nếu linh hoạt"></label>
-        <label class="cp-field"><span><i data-lucide="users" aria-hidden="true"></i>Đi cùng ai?</span><select id="cp-guests" aria-label="Số người tham gia"><option value="1">1 người</option><option value="2" selected>2 người</option><option value="4">4 người</option><option value="6">6 người</option></select></label>
-        <button class="cp-primary cursor-interaction" id="cp-do-search" type="button"><i data-lucide="search" aria-hidden="true"></i>Tìm trải nghiệm</button>
+        <button class="cp-primary cursor-interaction" id="cp-do-search" type="button"><i data-lucide="search" aria-hidden="true"></i><span class="cp-search-desktop">Tìm trải nghiệm</span><span class="cp-search-mobile">Tìm ngay</span></button>
       </form>
-      <div class="cp-quick"><span>Khám phá:</span><button type="button" class="cursor-interaction" data-place="Hà Nội">Hà Nội</button><span>·</span><button type="button" class="cursor-interaction" data-place="Huế">Huế</button><span>·</span><button type="button" class="cursor-interaction" data-place="Hội An">Hội An</button><span>·</span><button type="button" class="cursor-interaction" data-place="Sa Pa">Sa Pa</button><span>·</span><button type="button" class="cursor-interaction" data-place="TP.HCM">TP.HCM</button><span>·</span><button type="button" class="cursor-interaction" data-place="Cần Thơ">Cần Thơ</button><span>·</span><button type="button" class="cursor-interaction" data-place="">Tất cả điểm đến</button></div>
-      <div class="cp-geography"><label>Miền<select id="cp-area"><option value="">Cả nước</option><option value="north">Miền Bắc</option><option value="central">Miền Trung & Tây Nguyên</option><option value="south">Miền Nam</option></select></label><label>Điểm đến<select id="cp-destination-filter"><option value="">Mọi điểm đến</option></select></label><p>Tìm một nét văn hoá, chọn một nơi để đến.</p></div><div class="cp-categories" role="group" aria-label="Loại trải nghiệm">
+
+      <div class="cp-category-layout"><div class="cp-categories" role="group" aria-label="Loại trải nghiệm">
         <button class="cp-category cursor-interaction" data-category="all" aria-pressed="true"><i data-lucide="compass" aria-hidden="true"></i>Tất cả</button><button class="cp-category cursor-interaction" data-category="craft" aria-pressed="false"><i data-lucide="hand" aria-hidden="true"></i>Workshop</button><button class="cp-category cursor-interaction" data-category="food" aria-pressed="false"><i data-lucide="cooking-pot" aria-hidden="true"></i>Ẩm thực</button><button class="cp-category cursor-interaction" data-category="culture" aria-pressed="false"><i data-lucide="flower" aria-hidden="true"></i>Đời sống bản địa</button>
-        <button type="button" class="cp-category cursor-interaction" data-category="heritage" aria-pressed="false"><i data-lucide="landmark" aria-hidden="true"></i>Di sản & tour đêm</button><button type="button" class="cp-category cursor-interaction" data-category="trekking" aria-pressed="false"><i data-lucide="mountain" aria-hidden="true"></i>Trekking</button><button class="cp-filter-button cursor-interaction" id="cp-filter-toggle" aria-expanded="false" aria-controls="cp-filters"><i data-lucide="sliders-horizontal" aria-hidden="true"></i>Bộ lọc</button>
-      </div>
-      <div class="cp-filters" id="cp-filters" hidden><label>Giá tham khảo<select id="cp-budget"><option value="0">Mọi mức giá</option><option value="500000">Đến 500.000đ</option><option value="1000000">Đến 1.000.000đ</option><option value="3000000">Đến 3.000.000đ</option></select></label><label>Thời lượng<select id="cp-duration"><option value="0">Bất kỳ</option><option value="3">Đến 3 giờ</option><option value="8">Đến 8 giờ</option><option value="24">Đến 1 ngày</option></select></label><label>Tình trạng hoạt động<select id="cp-status"><option value="listed">Đang có trang giới thiệu</option><option value="all">Tất cả hồ sơ</option><option value="paused">Tạm ngưng / cần kiểm tra mở lại</option></select></label><label>Kênh đặt lịch<select id="cp-source"><option value="all">Tất cả kênh</option><option value="facebook">Có kênh Facebook</option><option value="airbnb">Airbnb Experiences</option></select></label><button type="button" class="cp-reset cursor-interaction" id="cp-clear">Xoá bộ lọc</button></div><p id="cp-filter-note" hidden>Chỉ hiện hoạt động có giá / thời lượng công bố phù hợp với bộ lọc đang chọn.</p><p id="cp-search-context" aria-live="polite"></p>
+        <button type="button" class="cp-category cursor-interaction" data-category="heritage" aria-pressed="false"><i data-lucide="landmark" aria-hidden="true"></i>Di sản & tour đêm</button><button type="button" class="cp-category cursor-interaction" data-category="trekking" aria-pressed="false"><i data-lucide="mountain" aria-hidden="true"></i>Trekking</button></div><button class="cp-filter-button cursor-interaction" id="cp-filter-toggle" aria-expanded="false" aria-controls="cp-filters"><i data-lucide="sliders-horizontal" aria-hidden="true"></i>Bộ lọc</button></div>
+      <div class="cp-filters" id="cp-filters" hidden><label>Giá tham khảo<select id="cp-budget"><option value="0">Mọi mức giá</option><option value="500000">Đến 500.000đ</option><option value="1000000">Đến 1.000.000đ</option><option value="3000000">Đến 3.000.000đ</option></select></label><label>Thời lượng<select id="cp-duration"><option value="0">Bất kỳ</option><option value="3">Đến 3 giờ</option><option value="8">Đến 8 giờ</option><option value="24">Đến 1 ngày</option></select></label><label>Tình trạng hoạt động<select id="cp-status"><option value="listed">Đang có trang giới thiệu</option><option value="all">Tất cả hồ sơ</option><option value="paused">Tạm ngưng / cần kiểm tra mở lại</option></select></label><label>Kênh đặt lịch<select id="cp-source"><option value="all">Tất cả kênh</option><option value="facebook">Có kênh Facebook</option><option value="airbnb">Airbnb Experiences</option></select></label><button type="button" class="cp-reset cursor-interaction" id="cp-clear">Xoá bộ lọc</button></div><p id="cp-filter-note" hidden>Chỉ hiện hoạt động có giá / thời lượng công bố phù hợp với bộ lọc đang chọn.</p>
       <section aria-labelledby="cp-results-title" id="cp-results">
         <div class="cp-section-head"><div><h2 id="cp-results-title">Những trải nghiệm đáng để đi</h2><p id="cp-results-meta" aria-live="polite">Những cuộc gặp nhỏ, những kỷ niệm lớn.</p></div><select id="cp-sort" class="cp-sort" aria-label="Sắp xếp trải nghiệm"><option value="suggested">Sắp xếp: Gợi ý cho bạn</option><option value="price">Giá từ thấp đến cao</option><option value="destination">Theo điểm đến</option></select></div>
         <div id="cp-grid" class="cp-grid"></div><div class="cp-list-footer"><p id="cp-shown-count" aria-live="polite"></p><button type="button" class="cursor-interaction" id="cp-load-more">Xem thêm hoạt động</button></div>
@@ -286,10 +490,49 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
   const norm = value => String(value ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
   const money = value => new Intl.NumberFormat('vi-VN').format(value) + 'đ';
   const external = url => /^https?:\/\//i.test(url || '') ? esc(url) : '#';
-  const statusLabel = item => item.availabilityStatus === 'temporarily_suspended' ? 'Tạm ngưng theo nguồn' : item.availabilityStatus === 'historical' ? 'Cần kiểm tra mở lại' : item.availabilityStatus === 'needs_confirmation' ? 'Cần xác nhận thông tin' : 'Có trang trải nghiệm';
+  const statusLabel = item => item.availabilityStatus === 'temporarily_suspended' ? 'Tạm ngưng theo nguồn' : item.availabilityStatus === 'historical' ? 'Cần kiểm tra mở lại' : 'Có trang trải nghiệm';
   const statusClass = item => ['temporarily_suspended','historical'].includes(item.availabilityStatus) ? 'cp-status-paused' : item.availabilityStatus === 'needs_confirmation' ? 'cp-status-check' : '';
   const dateLabel = () => date ? date.split('-').reverse().join('/') : 'Ngày linh hoạt';
-  let saved = new Set(), category = 'all', onlySaved = false, query = '', date = '', guests = 2, current = null, page = 1;
+  let saved = new Set(), category = 'all', onlySaved = false, query = '', date = '', current = null, page = 1;
+  // Official province names; familiar destination names remain searchable as aliases.
+  // https://baochinhphu.vn/bang-danh-muc-va-ma-so-cua-34-tinh-thanh-moi-3321-don-vi-hanh-chinh-cap-xa-moi-102250704153652947.htm
+  const provinceNames=[['01','Hà Nội'],['04','Cao Bằng'],['08','Tuyên Quang'],['11','Điện Biên'],['12','Lai Châu'],['14','Sơn La'],['15','Lào Cai'],['19','Thái Nguyên'],['20','Lạng Sơn'],['22','Quảng Ninh'],['24','Bắc Ninh'],['25','Phú Thọ'],['31','Hải Phòng'],['33','Hưng Yên'],['37','Ninh Bình'],['38','Thanh Hóa'],['40','Nghệ An'],['42','Hà Tĩnh'],['44','Quảng Trị'],['46','Huế'],['48','Đà Nẵng'],['51','Quảng Ngãi'],['52','Gia Lai'],['56','Khánh Hòa'],['66','Đắk Lắk'],['68','Lâm Đồng'],['75','Đồng Nai'],['79','TP. Hồ Chí Minh'],['80','Tây Ninh'],['82','Đồng Tháp'],['86','Vĩnh Long'],['91','An Giang'],['92','Cần Thơ'],['96','Cà Mau']];
+  const provinceAliases={'01':'Hà Nội','08':'Hà Giang','15':'Sa Pa · Bắc Hà · Mù Cang Chải · Yên Bái','14':'Tà Xùa · Mộc Châu','22':'Hạ Long','25':'Mai Châu · Hòa Bình · Vĩnh Phúc','31':'Cát Bà · Hải Dương','37':'Tam Cốc · Tràng An · Hà Nam · Nam Định','38':'Pù Luông','44':'Phong Nha · Quảng Bình','48':'Hội An · Mỹ Sơn · Quảng Nam','51':'Lý Sơn · Kon Tum','52':'Quy Nhơn · Bình Định','56':'Nha Trang · Ninh Thuận','66':'Buôn Ma Thuột · Phú Yên','68':'Đà Lạt · Mũi Né · Bình Thuận · Đắk Nông','75':'Cát Tiên · Bình Phước','79':'TP.HCM · Sài Gòn · Củ Chi · Cần Giờ · Côn Đảo','86':'Bến Tre · Trà Vinh','91':'Phú Quốc · Kiên Giang','92':'Sóc Trăng · Hậu Giang'};
+  const provincePriority=['01','48','46','79','15','37','68','44'];
+  const provinces=provinceNames.map(([id,label])=>({id,label,aliases:provinceAliases[id]||''})).sort((a,b)=>(provincePriority.includes(a.id)?provincePriority.indexOf(a.id):99)-(provincePriority.includes(b.id)?provincePriority.indexOf(b.id):99)||a.label.localeCompare(b.label,'vi'));
+  const regionProvince={'Hà Nội':'01','Huế':'46','Hà Giang':'08','Tà Xùa':'14','Sa Pa':'15','Ninh Bình':'37','Cao Bằng':'04','Pù Luông':'38','Mộc Châu':'14','Mù Cang Chải':'15','Hạ Long':'22','Điện Biên':'11','Bắc Hà':'15','Mai Châu':'25','Ba Bể':'19','Hội An':'48','Đà Nẵng':'48','Đà Lạt':'68','Đắk Lắk':'66','Phú Yên':'66','Quy Nhơn':'52','Nha Trang':'56','Quảng Trị':'44','Phong Nha':'44','Mỹ Sơn':'48','Ninh Thuận':'56','Lý Sơn':'51','Kon Tum':'51','TP.HCM':'79','Củ Chi':'79','Tây Ninh':'80','Cần Thơ':'92','An Giang':'91','Vĩnh Long':'86','Sa Đéc':'82','Bến Tre':'86','Côn Đảo':'79','Cát Tiên':'75','Cần Giờ':'79','Phú Quốc':'91','Mũi Né':'68','Cát Bà':'31','Lạng Sơn':'20','Cà Mau':'96','Trà Vinh':'86'};
+  const provinceIdFor=item=>item.provinceCode||regionProvince[item.region]||provinces.find(p=>norm(p.label)===norm(item.region))?.id||'';
+  let selectedProvince='',provincePickerOpen=false,activeProvince=-1,visibleProvinces=[];
+  const provinceInput=$('#cp-destination'),provincePicker=$('.cp-province-picker'),provinceToggle=$('.cp-province-toggle'),provinceList=$('#cp-province-list');
+  function closeProvincePicker(){provincePickerOpen=false;provincePicker.hidden=true;provinceInput.setAttribute('aria-expanded','false');provinceToggle.setAttribute('aria-expanded','false');provinceInput.removeAttribute('aria-activedescendant');}
+  function renderProvinceSuggestions(){
+    const typed=selectedProvince&&provinceInput.value===provinces.find(p=>p.id===selectedProvince)?.label?'':norm(provinceInput.value.trim());
+    const matches=provinces.filter(p=>!typed||norm(p.label+' '+p.aliases).includes(typed));
+    visibleProvinces=typed?matches:[{id:'',label:'Tất cả điểm đến',aliases:''},...matches];activeProvince=-1;provinceInput.removeAttribute('aria-activedescendant');
+    $('#cp-province-count').textContent=matches.length+' tỉnh, thành';
+    provinceList.innerHTML=visibleProvinces.length?visibleProvinces.map((p,index)=>`<li role="presentation"><button type="button" class="cp-province-option cursor-interaction" role="option" id="cp-province-${index}" aria-selected="${p.id===selectedProvince}" data-province="${p.id}"><i data-lucide="${p.id?'map-pin':'compass'}" aria-hidden="true"></i><span>${esc(p.label)}${typed&&p.aliases?`<small>${esc(p.aliases)}</small>`:''}</span>${p.id===selectedProvince?'<i data-lucide="check" aria-hidden="true"></i>':''}</button></li>`).join(''):'<li class="cp-province-empty">Không tìm thấy tỉnh, thành phù hợp. Bạn vẫn có thể tìm trải nghiệm bằng từ khoá.</li>';
+    icons();
+  }
+  function openProvincePicker(){renderProvinceSuggestions();provincePickerOpen=true;provincePicker.hidden=false;provinceInput.setAttribute('aria-expanded','true');provinceToggle.setAttribute('aria-expanded','true');}
+  function chooseProvince(id){selectedProvince=id;query=provinces.find(p=>p.id===id)?.label||'';provinceInput.value=query;date=$('#cp-date').value;category='all';onlySaved=false;page=1;$$('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category==='all')));closeProvincePicker();provinceInput.blur();showListing();}
+  provinceInput.addEventListener('focus',openProvincePicker);
+  provinceInput.addEventListener('click',()=>{if(!provincePickerOpen)openProvincePicker();});
+  provinceInput.addEventListener('input',()=>{selectedProvince='';openProvincePicker();});
+  provinceInput.addEventListener('keydown',event=>{
+    if(event.key==='Escape'){closeProvincePicker();return;}
+    if(event.key==='ArrowDown'||event.key==='ArrowUp'){
+      event.preventDefault();if(!provincePickerOpen)openProvincePicker();if(!visibleProvinces.length)return;
+      activeProvince=activeProvince<0?(event.key==='ArrowDown'?0:visibleProvinces.length-1):(activeProvince+(event.key==='ArrowDown'?1:-1)+visibleProvinces.length)%visibleProvinces.length;
+      provinceList.querySelectorAll('[role=option]').forEach((option,index)=>option.classList.toggle('cp-province-active',index===activeProvince));
+      provinceInput.setAttribute('aria-activedescendant','cp-province-'+activeProvince);$('#cp-province-'+activeProvince)?.scrollIntoView({block:'nearest'});
+    }else if(event.key==='Enter'&&provincePickerOpen&&activeProvince>=0){event.preventDefault();chooseProvince(visibleProvinces[activeProvince].id);}
+  });
+  provinceToggle.addEventListener('click',()=>{if(provincePickerOpen)closeProvincePicker();else{provinceInput.focus();openProvincePicker();}});
+  provinceList.addEventListener('pointerdown',event=>event.preventDefault());
+  provinceList.addEventListener('click',event=>{const option=event.target.closest('[data-province]');if(option)chooseProvince(option.dataset.province);});
+  root.addEventListener('focusout',event=>{if(!$('.cp-destination-field').contains(event.relatedTarget))closeProvincePicker();});
+  document.addEventListener('pointerdown',event=>{if(!$('.cp-destination-field').contains(event.target))closeProvincePicker();});
+
   const pageSize = 12;
 
   function icons() { if (typeof lucide !== 'undefined') lucide.createIcons({attrs:{width:18,height:18}}); }
@@ -308,16 +551,17 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
     $('#cp-saved').setAttribute('aria-pressed', String(onlySaved));
   }
   function filtered() {
-    const budget = Number($('#cp-budget').value), duration = Number($('#cp-duration').value), status = $('#cp-status').value, source = $('#cp-source').value, area = $('#cp-area').value, destination = $('#cp-destination-filter').value;
+    const budget = Number($('#cp-budget').value), duration = Number($('#cp-duration').value), status = $('#cp-status').value, source = $('#cp-source').value;
+    const normalizedQuery=norm(query), destinationQuery=experiences.some(item=>norm(item.region)===normalizedQuery);
     let found = experiences.filter(item => {
       const haystack = norm([item.title,item.region,item.location,item.provider,item.summary,item.areaLabel, ...(item.tags||[])].join(' '));
-      const matchesQuery = norm(query).split(' ').filter(Boolean).every(word=>haystack.includes(word));
+      const matchesQuery = selectedProvince ? provinceIdFor(item)===selectedProvince : destinationQuery ? norm(item.region)===normalizedQuery : normalizedQuery.split(' ').filter(Boolean).every(word=>haystack.split(' ').some(term=>term===word||(word.length>=3&&term.startsWith(word))));
       const matchesPrice = budget === 0 || (item.priceVnd !== null && item.priceVnd <= budget);
       const matchesDuration = duration === 0 || (item.durationHours !== null && item.durationHours <= duration);
       const isPaused = ['temporarily_suspended','historical'].includes(item.availabilityStatus);
       const matchesStatus = status === 'all' || (status === 'listed' && !isPaused) || (status === 'paused' && isPaused);
       const matchesSource = source === 'all' || (source === 'facebook' && Boolean(item.facebookUrl)) || (source === 'airbnb' && item.sources.some(s => s.url.includes('airbnb.com/experiences/')));
-      return (!onlySaved || saved.has(item.id)) && (category === 'all' || item.category === category) && (!area||item.area===area) && (!destination||item.region===destination) && matchesQuery && matchesPrice && matchesDuration && matchesStatus && matchesSource;
+      return (!onlySaved || saved.has(item.id)) && (category === 'all' || item.category === category) && matchesQuery && matchesPrice && matchesDuration && matchesStatus && matchesSource;
     });
     if ($('#cp-sort').value === 'price') found.sort((a,b) => (a.priceVnd??Infinity)-(b.priceVnd??Infinity));
     if ($('#cp-sort').value === 'destination') found.sort((a,b) => a.region.localeCompare(b.region,'vi'));
@@ -330,16 +574,15 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
     $('#cp-results-title').textContent = onlySaved ? 'Những trải nghiệm bạn đã lưu' : query ? 'Khám phá '+query : 'Những trải nghiệm đáng để đi';
     const foundDestinations=[...new Set(found.map(item=>item.region))];
     $('#cp-results-meta').textContent = found.length+' trải nghiệm · '+(foundDestinations.length===1?foundDestinations[0]:foundDestinations.length+' điểm đến');
-    $('#cp-search-context').textContent = (date ? 'Ngày mong muốn: '+dateLabel()+' · ' : '')+guests+' người · Liên hệ đơn vị tổ chức để xác nhận lịch và số chỗ.';
     $('#cp-filter-note').hidden = !Number($('#cp-budget').value) && !Number($('#cp-duration').value);
     $('#cp-grid').innerHTML = visible.length ? visible.map(item => `
       <article class="cp-item">
         <div class="cp-card-media"><button type="button" class="cp-photo-button cursor-interaction" data-detail="${esc(item.id)}" aria-label="Xem ${esc(item.title)}">${cover(item)}</button><button type="button" class="cp-favorite cursor-interaction" data-save="${esc(item.id)}" aria-label="${saved.has(item.id)?'Bỏ lưu':'Lưu'} ${esc(item.title)}" aria-pressed="${saved.has(item.id)}"><i data-lucide="heart" aria-hidden="true"></i></button></div>
-        <div class="cp-location">${esc(item.location||item.region)}</div><button type="button" class="cp-title-button cursor-interaction" data-detail="${esc(item.id)}"><h3>${esc(item.title)}</h3></button>
-        <div class="cp-item-meta">${esc(item.provider)}${item.durationLabel?' · '+esc(item.durationLabel):''}</div>
-        ${rating(item)}${['temporarily_suspended','historical','needs_confirmation'].includes(item.availabilityStatus)?`<span class="cp-data-status ${statusClass(item)}">${statusLabel(item)}</span>`:''}
-        ${item.priceVnd!==null?'<div class="cp-price">'+(item.priceVnd===0?'<strong>Miễn phí</strong>':'Giá tham khảo từ <strong>'+money(item.priceVnd)+'</strong>')+'</div>':''}
-        <button type="button" class="cp-card-contact cursor-interaction" data-detail="${esc(item.id)}">Khám phá trải nghiệm <span aria-hidden="true">→</span></button>
+        <div class="cp-card-content"><div class="cp-location"><i data-lucide="map-pin" aria-hidden="true"></i>${esc(item.region)}</div><button type="button" class="cp-title-button cursor-interaction" data-detail="${esc(item.id)}"><h3>${esc(item.title)}</h3></button>
+        <div class="cp-item-meta">${esc(item.provider)}</div>${item.durationLabel?`<div class="cp-card-duration"><i data-lucide="clock-3" aria-hidden="true"></i>${esc(item.durationLabel)}</div>`:''}
+        ${rating(item)}${['temporarily_suspended','historical'].includes(item.availabilityStatus)?`<span class="cp-data-status ${statusClass(item)}">${statusLabel(item)}</span>`:''}
+        <div class="cp-card-bottom">${item.priceVnd!==null?'<div class="cp-price">'+(item.priceVnd===0?'<strong>Miễn phí</strong>':'Từ <strong>'+money(item.priceVnd)+'</strong>')+'</div>':''}
+        <button type="button" class="cp-card-contact cursor-interaction" data-detail="${esc(item.id)}">Chi tiết<i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div></div>
       </article>`).join('') : `<div class="cp-empty"><p>${onlySaved&&!saved.size?'Chưa có trải nghiệm nào được lưu. Nhấn trái tim để giữ lại nơi bạn muốn đến.':'Chưa có hoạt động khớp với lựa chọn này. Thử điểm đến hoặc bộ lọc khác.'}</p><button type="button" class="cp-primary cursor-interaction" data-reset-all>Khám phá tất cả</button></div>`;
     $('#cp-load-more').hidden = visible.length >= found.length;
     $('#cp-load-more').textContent = 'Xem thêm '+Math.min(pageSize,found.length-visible.length)+' hoạt động';
@@ -347,11 +590,10 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
     updateNav(); icons();
   }
   function showListing() { $('#cp-discover').hidden=false; $('#cp-detail').hidden=true; current=null; render(); }
-  function destinationOptions() {const area=$('#cp-area').value;const available=[...new Set(experiences.filter(item=>!area||item.area===area).map(item=>item.region))].sort((a,b)=>a.localeCompare(b,'vi'));const selected=$('#cp-destination-filter').value;$('#cp-destination-filter').innerHTML='<option value="">Mọi điểm đến</option>'+available.map(region=>`<option value="${esc(region)}">${esc(region)}</option>`).join('');if(available.includes(selected))$('#cp-destination-filter').value=selected;}
-  function resetFilters() { $('#cp-budget').value='0'; $('#cp-duration').value='0'; $('#cp-status').value='listed'; $('#cp-source').value='all'; $('#cp-area').value='';$('#cp-destination-filter').value='';destinationOptions();page=1; }
+  function resetFilters() { $('#cp-budget').value='0'; $('#cp-duration').value='0'; $('#cp-status').value='listed'; $('#cp-source').value='all'; page=1; }
   function reset() {
-    query='';date='';guests=2;category='all';onlySaved=false;page=1;
-    $('#cp-destination').value='';$('#cp-date').value='';$('#cp-guests').value='2';$('#cp-sort').value='suggested';
+    query='';date='';category='all';onlySaved=false;page=1;selectedProvince='';closeProvincePicker();
+    $('#cp-destination').value='';$('#cp-date').value='';$('#cp-sort').value='suggested';
     resetFilters();$$('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category==='all')));showListing();
   }
   function reviewSection(item) {
@@ -389,7 +631,7 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
         <section class="cp-host-card"><span class="cp-host-symbol"><i data-lucide="handshake" aria-hidden="true"></i></span><div><small>Đơn vị tổ chức</small><h3>${esc(item.provider)}</h3><p>${esc(item.region)} · ${esc(labels[item.category])}</p></div><a href="${external(item.websiteUrl||item.bookingUrl)}" target="_blank" rel="noopener noreferrer">Ghé thăm website ↗</a></section>
       </main><aside class="cp-rich-sidebar" aria-label="Đặt lịch trải nghiệm"><div class="cp-booking">
         ${item.priceVnd!==null?`<div class="cp-detail-price"><small>Giá tham khảo${item.priceVnd>0?' từ':''}</small><strong>${item.priceVnd===0?'Miễn phí':money(item.priceVnd)}</strong></div>`:''}<h2 class="cp-contact-heading">Lên lịch trải nghiệm</h2><p class="cp-contact-host">${esc(item.provider)}</p>
-        <div class="cp-booking-inputs"><label>Ngày dự kiến<input id="cp-detail-date" type="date" value="${esc(date)}"></label><label>Số người<select id="cp-detail-guests">${[1,2,3,4,5,6,7,8,9,10].map(n=>`<option value="${n}" ${guests===n?'selected':''}>${n}${n===10?'+':''} người</option>`).join('')}</select></label></div>
+        <div class="cp-booking-inputs"><label>Ngày dự kiến<input id="cp-detail-date" type="date" value="${esc(date)}"></label></div>
         <p class="cp-booking-note">Lịch và chỗ trống được xác nhận trực tiếp khi bạn đặt với đơn vị tổ chức.</p>
         ${paused?'<p class="cp-paused-note">Hoạt động cần kiểm tra lại tình trạng mở cửa trước khi lên kế hoạch.</p>':''}
         <a class="cp-contact-web cp-main-book" href="${external(item.bookingUrl)}" target="_blank" rel="noopener noreferrer">${bookingLabel}<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
@@ -397,6 +639,7 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
         ${item.facebookUrl&&item.facebookUrl!==item.bookingUrl?`<a class="cp-facebook-link" href="${external(item.facebookUrl)}" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle" aria-hidden="true"></i>Trao đổi qua Facebook ↗</a>`:''}
         <div class="cp-booking-bottom"><span><i data-lucide="external-link" aria-hidden="true"></i>Đặt trực tiếp với đơn vị tổ chức</span><span><i data-lucide="heart" aria-hidden="true"></i>Lưu một trải nghiệm, chờ một ngày đẹp</span></div>
       </div></aside></div>
+      <div class="cp-mobile-book" aria-label="Đặt lịch nhanh"><div>${item.priceVnd!==null?`<small>Giá tham khảo từ</small><strong>${item.priceVnd===0?'Miễn phí':money(item.priceVnd)}</strong>`:`<small>Khám phá cùng</small><strong>${esc(item.provider)}</strong>`}</div>${item.phoneDial?`<a class="cp-mobile-call" href="tel:${esc(item.phoneDial)}" aria-label="Gọi ${esc(item.provider)}"><i data-lucide="phone" aria-hidden="true"></i></a>`:''}<a class="cp-mobile-book-link" href="${external(item.bookingUrl)}" target="_blank" rel="noopener noreferrer">Đặt lịch<i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
       <dialog class="cp-lightbox" id="cp-lightbox" aria-label="Thư viện ảnh"><button type="button" class="cp-lightbox-close" data-close-photo aria-label="Đóng thư viện ảnh">×</button><button type="button" class="cp-lightbox-prev" data-photo-step="-1" aria-label="Ảnh trước">‹</button><figure><img id="cp-lightbox-image" alt=""><figcaption id="cp-lightbox-caption"></figcaption></figure><button type="button" class="cp-lightbox-next" data-photo-step="1" aria-label="Ảnh tiếp theo">›</button><p id="cp-lightbox-counter"></p></dialog>`;
     icons();$('#cp-detail').scrollIntoView({block:'start'});
   }
@@ -405,16 +648,15 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
     if(!current)return;const list=photos(current);if(!list.length)return;photoIndex=(index+list.length)%list.length;
     const photo=list[photoIndex],dialog=$('#cp-lightbox');$('#cp-lightbox-image').src=images[photo.assetKey];$('#cp-lightbox-image').alt=photo.caption||current.title;$('#cp-lightbox-caption').innerHTML=esc(photo.caption||current.title)+(photo.licenseUrl?`<br><a href="${external(photo.sourceUrl)}" target="_blank" rel="noopener noreferrer">Ảnh gốc</a> · <a href="${external(photo.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(photo.license)}</a> · Ảnh đã thu nhỏ`:'');$('#cp-lightbox-counter').textContent=(photoIndex+1)+' / '+list.length;if(!dialog.open)dialog.showModal();
   }
-  function search() { query=$('#cp-destination').value.trim();date=$('#cp-date').value;guests=Number($('#cp-guests').value);onlySaved=false;page=1;render(); }
+  function search() { query=$('#cp-destination').value.trim();const exact=provinces.find(p=>norm(p.label)===norm(query));if(exact){selectedProvince=exact.id;query=exact.label;provinceInput.value=query;}date=$('#cp-date').value;onlySaved=false;page=1;closeProvincePicker();render(); }
   $('#cp-do-search').onclick=search;
   $('#cp-search').addEventListener('submit',event=>{event.preventDefault();search();});
-  $('#cp-destination').addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();search();}});
   root.addEventListener('click',event=>{
     const button=event.target.closest('button');if(!button)return;
     if(button.hasAttribute('data-save')){const id=button.dataset.save;saved.has(id)?saved.delete(id):saved.add(id);if(current){button.textContent=saved.has(id)?'♥ Đã lưu trải nghiệm':'♡ Lưu trải nghiệm này';updateNav();}else render();}
     if(button.hasAttribute('data-detail'))detail(button.dataset.detail);
     if(button.hasAttribute('data-category')){category=button.dataset.category;page=1;$$('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));render();}
-    if(button.hasAttribute('data-place')){query=button.dataset.place;$('#cp-destination').value=query;$('#cp-area').value='';$('#cp-destination-filter').value='';destinationOptions();category='all';$$('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category==='all')));onlySaved=false;page=1;showListing();$('#cp-results-title').scrollIntoView({block:'start'});}
+    if(button.hasAttribute('data-place')){selectedProvince='';closeProvincePicker();query=button.dataset.place;$('#cp-destination').value=query;category='all';$$('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category==='all')));onlySaved=false;page=1;showListing();$('#cp-results-title').scrollIntoView({block:'start'});}
     if(button.hasAttribute('data-reset-all')||button.id==='cp-home')reset();
     if(button.id==='cp-back')showListing();
     if(button.id==='cp-load-more'){page++;render();}
@@ -425,18 +667,17 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
     if(button.hasAttribute('data-review-platform')){const platform=button.dataset.reviewPlatform;$$('[data-review-platform]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));$$('.cp-review-card').forEach(card=>card.hidden=platform!=='all'&&card.dataset.platform!==platform);}
 
   });
-  root.addEventListener('change',event=>{if(event.target.id==='cp-detail-date')date=event.target.value;if(event.target.id==='cp-detail-guests')guests=Number(event.target.value);});
+  root.addEventListener('change',event=>{if(event.target.id==='cp-detail-date')date=event.target.value;});
   root.addEventListener('keydown',event=>{if($('#cp-lightbox')?.open){if(event.key==='ArrowRight')showPhoto(photoIndex+1);if(event.key==='ArrowLeft')showPhoto(photoIndex-1);}});
   $('#cp-explore').onclick=()=>{onlySaved=false;showListing();};
   $('#cp-saved').onclick=()=>{reset();onlySaved=true;showListing();};
   $('#cp-story-toggle').onclick=()=>{$('#cp-story').hidden=!$('#cp-story').hidden;$('#cp-story-toggle').setAttribute('aria-expanded',String(!$('#cp-story').hidden));};
   $('#cp-filter-toggle').onclick=()=>{$('#cp-filters').hidden=!$('#cp-filters').hidden;$('#cp-filter-toggle').setAttribute('aria-expanded',String(!$('#cp-filters').hidden));};
   $('#cp-clear').onclick=()=>{resetFilters();render();};
-  ['#cp-budget','#cp-duration','#cp-status','#cp-source','#cp-sort','#cp-destination-filter'].forEach(selector=>$(selector).addEventListener('change',()=>{page=1;render();}));
-  $('#cp-area').addEventListener('change',()=>{destinationOptions();page=1;render();});
+  ['#cp-budget','#cp-duration','#cp-status','#cp-source','#cp-sort'].forEach(selector=>$(selector).addEventListener('change',()=>{page=1;render();}));
   $$('[data-asset]').forEach(image=>{image.src=images[image.dataset.asset]||'';});
   $('#cp-data-count').textContent=experiences.length;
-  destinationOptions();
+
   render();
   // Dữ liệu từ Supabase (nếu đã điền config.js); lỗi hoặc chưa cấu hình thì giữ dữ liệu có sẵn trong trang
   (async()=>{
@@ -452,7 +693,7 @@ lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`create
         ['highlights','itinerary','includes','notes','reviews','images','sources','tags'].forEach(k=>{if(!Array.isArray(o[k]))o[k]=[];});
         if(o.priceVnd===undefined)o.priceVnd=null;if(o.durationHours===undefined)o.durationHours=null;if(!o.bookingUrl)o.bookingUrl='';return o;});
       experiences.length=0;list.forEach(x=>experiences.push(x));
-      $('#cp-data-count').textContent=experiences.length;destinationOptions();page=1;render();
+      $('#cp-data-count').textContent=experiences.length;page=1;render();
     }catch(e){console.warn('Chợ Phiên: không đọc được Supabase, dùng dữ liệu có sẵn.',e);}
   })();
 })();
